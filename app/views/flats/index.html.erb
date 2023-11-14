@@ -1,0 +1,24 @@
+<%= render partial: "navbar" %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 my-2">
+      <h1 class="px-4">All our <%= @flats.count %> flats</h1>
+    </div>
+  </div>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-12 col-lg-4 my-2">
+      <div class="cards container d-flex justify-content-between">
+        <div class="card" style="width: 100vh;">
+          <img src="https://a0.muscache.com/im/pictures/61b3df86-ab14-45fd-a73c-1ca1d30d4a6b.jpg?im_w=720" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><%= flat.address %></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          </div>
+        </div>
+  </div>
+    <% end %>
+  </div>
+</div>
